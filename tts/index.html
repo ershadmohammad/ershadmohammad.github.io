@@ -1,0 +1,178 @@
+<html>
+<head>
+<script src="jquery-1.12.4.js"></script>
+<style>
+table  {  border-spacing:0 !important;  
+  border-collapse: collapse;
+}
+
+#tts td { margin:0;
+padding:0;  }
+	.kotak { width: 30px; 
+			height: 30px;
+			border: 1px solid black;
+			position: relative; }
+	.hitam { background-color: #000; }
+	
+	.isian { width: 100%; 
+			height: 100%; 
+			border:0;
+			text-align: center;
+			font-size: 16px;
+			font-weight: bold; 
+			text-transform: uppercase; 
+			background-color: transparent; }
+	.nomor { position: absolute; 
+			 z-index: -2;
+			top: 2px;
+			left: 2px; 
+			font-size: 12px;}
+			
+	.merah { background-color:red; }
+
+.pertanyaan { margin-left: 20px; }	
+.pertanyaan { margin-left: 20px; }	
+	 
+</style>
+</head>
+
+<body>
+
+<table id="container">
+
+<tr>
+	<td>
+		<div id="tts">
+		</div>
+	
+	</td>
+	
+	<td>
+	<div class="pertanyaan mendatar">
+<strong>Mendatar</strong>
+<p>1 Sys admin PBK yang paling ganteng
+<p>4 Duduk disebelah mamen
+<p>5 Heri
+<p>8 Biang kerok
+<p>10 nama burung
+<p>11 Dari yakinku..
+</div>
+		
+	</td>
+	
+	<td>
+	
+	<div class=" pertanyaan menurun">
+<strong>	Menurun</strong>
+<p>1 Desktop environtment linux
+<p>2 Kacau
+<p>3 mamen (dibalik)
+<p>6 salah satu Kadiv
+<p>7 Direktur kite
+<p>9 Karakter ershad
+</div>
+	</td>
+
+</table>
+
+<br>
+<button id="cek">Periksa Jawaban</button>
+
+<script>
+	var table =[{ "dt": "d1,t1", "g": 1 },{ "dt": "d1" },{ "dt": "d1, t2", "g" : 2 },{ "dt": "d1" },{ "dt": "d1" },{ "dt": "d1" },{ "dt": "d1" },{ "dt": "d1, t3", "g": 3 },"br",{ "dt": "t1" },,{ "dt": "t2" },,,,,{ "dt": "t3" },"br",{ "dt": "t1, d4", "g": 4 },{ "dt": "d4" },{ "dt": "t2,d4" },{ "dt": "d4" },{ "dt": "d4" },{ "dt": "d4" },,{ "dt" : "t3" },"br",,,{ "dt": "t2" },,,,,,"br",,,{ "dt": "t2,d5", "g": 5 },{ "dt": "d5,t6", "g": 6 },{ "dt": "d5" },{ "dt": "d5,t7", "g": 7 },,,"br",,,,{ "dt":"t6" },,{ "dt": "t7,d8", "g": 8 },{ "dt": "d8" },{ "dt": "d8,t9", "g": 9 },"br",,{ "dt": "d10", "g": 10 },{ "dt": "d10" },{ "dt": "t6, d10" },,{ "dt": "t7" },,{ "dt": "t9" },"br",,,,,,{ "dt": "t7" },,{ "dt": "t9" },"br",,,,,,{ "dt": "t7" },,{ "dt": "t9" },"br",,,,{ "dt": "d11,t12", "g": 11 },{ "dt": "d11" },{ "dt": "t7,d11" },{ "dt": "d11" },{ "dt": "t9,d11" },"br"];	 
+	
+	var jawaban = [
+			{ "soal": "d1", "jwb": "kurniadi" },
+			{ "soal": "t1", "jwb": "kde" },
+			{ "soal": "t2", "jwb": "rusuh" },
+			{ "soal": "t3", "jwb": "ida" },
+			{ "soal": "t6", "jwb": "eko" },
+			{ "soal": "t7", "jwb": "ichang" },
+			{ "soal": "t9", "jwb": "soleh" },
+			
+			{ "soal": "d4", "jwb": "ershad" },
+		 { "soal": "d5", "jwb": "heri" },
+		 { "soal": "d8", "jwb": "cis" },
+		 { "soal": "d10", "jwb": "beo" },
+		 { "soal": "d11", "jwb": "teguh" }
+	];
+			 
+			 
+	var tabel = $('<table></table>');
+	var tr = $('<tr></tr>');
+	for( var i = 0; i< table.length; i++){
+	
+		var flag = table[i];
+		 
+		if(typeof flag == "undefined"){ 
+			var div = $('<div></div>').addClass('kotak hitam');	
+			$('<td></td>').append(div).appendTo(tr);	
+ 		
+		} else if(  flag == "br") {
+			tabel.append(tr);
+			tr=$('<tr></tr>');				
+		} else {
+ 
+ 		
+			
+			var div = $('<div></div>').addClass('kotak putih');
+ 
+			if( flag.g != null){
+				$('<span class="nomor"></span>').html( flag.g).appendTo(div);
+			}
+			
+			var input = $('<input class="isian" type="text" maxlength="1" />').addClass( flag.dt.replace(",", " ") );
+			div.append( input);
+			$('<td></td>').append(div).appendTo(tr);
+		}
+	}	
+	$('#tts').append(tabel);
+	
+	$(".isian").blur(function(){
+		 if( $.isNumeric( $(this).val() ) )  {
+          $(this).val("");
+		}
+	
+	});
+	
+	function getAnswer(id){		
+		 var jwb = "";
+			$("."+id).each( function( index ) {
+			 jwb += $( this ).val() } );
+			 
+		 
+		 
+		 return jwb;
+
+	}
+	
+	function cek(){
+		var bol = false;
+		
+		for(var i=0; i<jawaban.length; i++){
+			var soal = jawaban[i].soal;
+			var jwb = jawaban[i].jwb;
+			var isian = getAnswer(soal);
+			if( jwb !== isian.toLowerCase() ){
+				bol = true;
+			}	
+			
+		}
+		
+		if( bol){
+			alert("jawaban masih ada yang salah")
+		} else {
+			alert("Selamat anda benar semua")
+		}
+	}
+	
+	$('#cek').click(
+	function(){
+		 cek();
+		});
+
+ 
+</script>
+</body>
+
+</html>
