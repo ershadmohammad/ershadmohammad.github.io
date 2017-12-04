@@ -169,23 +169,23 @@ margin-left: 60px;
 }
 
 
-.widget {
+.bwidget {
     margin-left:  20px;
     margin-bottom: 40px;  
 }
 
  
 
-.widget li {
+.bwidget li {
     margin-bottom: 10px
 }
 
-.widget h3 {
+.bwidget h3 {
     color: #fff;   
     font-size: 22px;     
 }
 
-.widget h3::after {
+.bwidget h3::after {
     content: "";
     display: block;
     width: 40px;
@@ -194,7 +194,7 @@ margin-left: 60px;
     margin-top: 14px;
 }
 
-.widget li a {
+.bwidget li a {
     color: #fff;
     font-family: 'Open Sans';
     font-size: 14px;   
@@ -202,7 +202,7 @@ margin-left: 60px;
    
 }
 
-.widget li a:hover {
+.bwidget li a:hover {
     color:#337ab7
      
 }
