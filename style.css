@@ -1,0 +1,457 @@
+body {
+     background-color: #000;
+     font-family: 'Source Sans Pro', sans-serif;
+     padding-top: 60px;
+     font-size: 16px;
+}
+
+a:focus, a:hover {
+    text-decoration: none;
+}
+
+
+ 
+
+.header .container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+   
+}
+
+.logo {     
+    display: inline-block;    
+    vertical-align: middle;         
+}
+
+.logo .icon {
+    width: 34px; 
+    height: auto;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+  .tagline {
+    font-weight: 900;
+    font-size: 28px;
+    color: #333;
+    display: inline-block;     
+    letter-spacing: -1px;
+    vertical-align: middle;    
+    line-height: 1.2;
+
+  
+}
+
+ .konten {
+     padding-left:0px;
+     padding-right:0px;
+ }
+
+.tagline .by {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    text-shadow: none;
+    display: block;   
+ 
+}
+
+.menu {
+    display: inline-block;
+    text-transform: capitalize;
+font-size: 16px;   
+margin-left: 60px;
+ }
+
+.menu a {
+    color: #000;
+
+}
+
+.menu li {
+    margin-right: 30px;
+}
+
+
+ 
+.header {
+    height: 60px;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0px 0px 6px #666666;
+    z-index: 2;
+   
+}
+
+
+.indexcategory {
+    color: #ccc;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;  
+   
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.indexcategory .list-inline {
+    margin-bottom: 0;
+}
+
+
+.barsbutton {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    top: 10px;
+     
+
+    /*
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform:   translateY(-50%);
+    width: 90px;     
+    */
+}
+
+
+.barsbutton .text {
+    display: inline-block;     
+    text-transform: uppercase;
+    font-weight: 400;  
+    margin-top: 8px;
+}
+
+
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+.imageheader {
+    background-image: url('https://static.pexels.com/photos/574071/pexels-photo-574071.jpeg');
+    background-size: 100%;
+    height: 200px;
+    width: 100%;
+}
+
+ 
+
+.bgwhite {
+    background-color: #fff;    
+}
+
+.leftcontent {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+
+.featuredimage {
+    margin-left: -35px;
+    margin-right: -35px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+
+.widget {
+    margin-left:  20px;
+    margin-bottom: 40px;  
+}
+
+ 
+
+.widget li {
+    margin-bottom: 10px
+}
+
+.widget h3 {
+    color: #fff;   
+    font-size: 22px;     
+}
+
+.widget h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: yellow;
+    margin-top: 14px;
+}
+
+.widget li a {
+    color: #fff;
+    font-family: 'Open Sans';
+    font-size: 14px;   
+    font-weight: 700;
+   
+}
+
+.widget li a:hover {
+    color:#337ab7
+     
+}
+
+
+.likebox {
+    
+    
+    
+    background-color: yellow;
+     
+}
+
+
+.likebox p {
+    font-family: arial;
+    line-height: 0.8;
+    font-size: 28pt;
+    color: #000;
+    text-align: left;
+    font-weight: 800;
+    position: relative;
+    top: -2px;
+    left: -3px;
+}
+
+.likebox .nobreak {
+    display: block;
+}
+
+.fb {
+    padding: 10px;
+    display: none;
+}
+
+.searchbutton {
+    font-size: 30px;
+}
+
+
+.komentar h3 {
+     
+     
+}
+
+.postfooter {
+    width: 100%;
+    height: 100px;
+    background-color: #ccc;
+}
+
+
+footer .tagline {
+    color: #fff;
+}
+
+
+
+.readmore:link {
+    border: 2px solid #000;
+    background:  yellow;
+    padding:6px;
+    display: inline-block;
+    color: #000;   
+    
+}
+
+.readmore:hover {
+    text-decoration: none;
+    background-color: white;
+}
+
+ 
+.stamp {
+    position: absolute;
+    right: 0px;
+    background: #000;
+    border: 2px solid yellow;
+}
+
+
+.item {
+    background-color: #fff;
+    
+  
+    max-width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.item-body {
+    padding: 30px;
+}
+
+.item-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.item-title a {
+    color: inherit;
+}
+
+.item-title a:hover {
+  color: #337ab7;  
+}
+
+.img-item img {
+    opacity: 0.8;
+    
+}
+
+.img-item   {
+    background-color: black;
+}
+
+ 
+
+@media (min-width: 768px) { 
+    .item:hover {
+        outline: 6px solid yellow;
+    }
+
+    .item:hover .img-item img {
+        opacity: 1;
+    }
+}
+
+
+.item-tanggal {
+    font-weight: 700;
+    font-size: 12px;
+    color: #666;
+}
+
+.item p {
+    font-size: 16px;
+}
+
+
+.item-kat {
+    font-weight: 700;
+   color: #000;
+   font-size: 14px;
+}
+
+ 
+.gutter-sizer, .grid-sizer { margin:0 !important; }
+.gutter-sizer { width: 0%; }
+
+
+@media (min-width: 576px) { 
+    .grid-sizer,
+    .item { width: 100%; }
+    .gutter-sizer { width: 0%; }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .grid-sizer,
+    .item { width: 45%; 
+        margin-bottom: 5%; }
+    .gutter-sizer { width: 5%; }
+    
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .grid-sizer,
+    .item { width: 100%; }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+    .grid-sizer,
+    .item { width: 30%; 
+    margin-bottom: 5%; }
+    .gutter-sizer { width:5%; }
+
+
+ }
+
+
+
+
+
+ .catlabel {
+     text-transform: capitalize;
+ }
+
+
+ footer {
+    width: 100%;
+    
+    border-top: 2px solid #666;
+    margin-top: 100px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+footer .tagline {
+    font-size: 26px;
+}
+
+.socmed {
+    color: white;
+}
+
+
+
+.socmed .fa {
+    font-size: 2em;
+}
+
+@media (min-width: 768px) { 
+    .socmed .fa {
+        font-size: 2.5em;
+    }
+}
+
+.copyright {
+    font-weight: 700;
+    color: white;
+}
+
+.panel {
+    border-radius: 0px;
+    background-color: #000;
+     
+}
+
+.panel li {
+    background-color: transparent;
+}
+
+.about {
+      
+      background-color: transparent;
+   
+      
+}
+
+.popular {}
+
+ 
+ body {
+     background-image: url('bg3.jpg');
+     background-attachment: fixed;
+ }
+ 
