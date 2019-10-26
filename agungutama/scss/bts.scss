@@ -1,0 +1,248 @@
+@charset 'utf-8';
+
+@import 'bts/bootstrap.scss';
+
+.navbar-blue a {
+    color: #0056b3 !important;
+}
+
+
+/* .dropdown-menu {
+    display: block;
+    visibility: hidden;    
+    opacity: 0;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 600ms ease-in-out ;
+}
+
+.dropdown-menu.show {   
+    visibility: visible;
+    max-height: 500px;
+    opacity: 1;
+} */
+
+
+.logohead {
+    img { width: 40px;
+    height: auto;}
+}
+
+.quote-div{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #1089ff;
+    color: #ffffff;
+}
+
+.service-div {
+    font-weight: 300 !important;
+    font-family: Heebo !important;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    .title {
+        margin-bottom: 50px;
+    }
+    
+}
+
+.service-logo {
+    display: inline-block;
+    padding: 14px;
+    background-color: #1089ff;
+    color: #fff;
+    
+}
+
+.title {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1rem;
+    font-family: Raleway;
+    font-weight: 400;
+    color: #333333;
+    &:before {
+        content: '';
+        display:inline-block;
+        width: 50%;
+        height: 4px;
+        background-color: #0056b3;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.title-kiri {
+
+    &:before {
+        left: 0px;
+        transform: none;
+    }
+    
+}
+
+ 
+.container-wrap {
+    flex-wrap: wrap !important;
+}
+.topbar {
+    width: 100%;
+     border-bottom: 0px solid rgb(214, 214, 214);
+     font-size: 0.9rem;
+     background-color: #f1f1f1;
+    height: 30px;
+overflow: hidden; 
+color: #fff;}
+
+.btn-next  {
+
+    display: inline-block;
+    position: relative;
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 150px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        transition: left 300ms, top 300ms; //z-index 0.4s ease-in 1s;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 150px;
+        height: 50px;
+        background-color: yellow;
+        position: absolute;
+        left: 5px;
+        top: 4px;
+        z-index: -2;
+        transition: left 300ms, top 300ms, z-index ease 150ms;
+    }
+
+    &:hover::before {
+        left: 5px;
+        top: 4px;
+        z-index: -2px;
+        
+    }
+
+    &:hover::after {
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+        
+    }
+
+}     
+
+
+.ers-section {
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
+.accordion-title {
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    outline: 0;
+    color: #333;
+    background-color: #e5e5e5;
+    text-align: left;
+    padding-left: 60px;    
+    transition: background-color 0.3s;
+
+    &:hover {
+        color: #333;
+        background-color: #e5e5e5;
+    }
+
+    &:before {
+        font-family: IcoFont !important;
+        position: absolute;
+        left: 20px;
+        content:'\efc1'
+    }
+    
+    
+
+    &:after {
+        font-family: IcoFont !important;
+        position: absolute;
+        right: 20px;
+        content: '\eaa1';
+
+    }
+}
+
+.accordion-title {
+
+    &[aria-expanded='true']{
+        background-color: #ffbc13;
+
+        &:before {
+            font-family: IcoFont !important;
+            position: absolute;
+            left: 20px;
+            content: '\ef99';
+        }
+        &:after {
+            content: '\ea99';
+        }
+    }
+     
+    
+
+  
+
+    
+}
+
+ 
+.news-div {
+    
+}
+.info-div {
+    .card {
+        margin-bottom: 10px;
+    }
+
+    label {
+        color: #e5e5e5;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+    background-color: #333
+}
+ 
+.footer-div {
+     
+    background-color: #222222;
+    color: #fff;
+
+}
+
+.title-dark {
+    color: #fff;
+        &:before {
+            background-color: yellow;
+        }
+}
+
+.main-title {
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
